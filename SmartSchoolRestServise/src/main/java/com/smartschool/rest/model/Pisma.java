@@ -10,7 +10,7 @@ import java.text.SimpleDateFormat;
 
 @Entity
 @Table(name = "massages")
-public class Massage {
+public class Pisma {
     @Id
     @GeneratedValue
     private int massage_id;
@@ -91,6 +91,6 @@ public class Massage {
     }
 
     public static void setDf(SimpleDateFormat df) {
-        Massage.df = df;
+        Pisma.df = df;
     }
 }

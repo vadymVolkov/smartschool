@@ -1,6 +1,6 @@
 package com.smartschool.rest.servise;
 
-import com.smartschool.rest.model.Massage;
+import com.smartschool.rest.model.Pisma;
 import com.smartschool.rest.repository.MassageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,11 +12,11 @@ public class MassageService {
     @Autowired
     private MassageRepository massageRepository;
 
-    public List<Massage> getAllMassageForClassByClassId(int id) {
+    public List<Pisma> getAllMassageForClassByClassId(int id) {
         return massageRepository.getAllMassageForClassByClassId(id);
     }
 
-    public List<Massage> getMassagesByParentNum(String num) {
+    public List<Pisma> getMassagesByParentNum(String num) {
         return massageRepository.getParentMassageByNumber(num);
     }
 }

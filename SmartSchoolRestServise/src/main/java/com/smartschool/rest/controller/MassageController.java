@@ -1,6 +1,6 @@
 package com.smartschool.rest.controller;
 
-import com.smartschool.rest.model.Massage;
+import com.smartschool.rest.model.Pisma;
 import com.smartschool.rest.servise.MassageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,18 +16,18 @@ public class MassageController {
     MassageService massageService;
 
     @RequestMapping("/massages")
-    public List<Massage> getAllMassageForClassByClassId(@RequestParam(value = "class", defaultValue = "1") int classId) {
+    public List<Pisma> getAllMassageForClassByClassId(@RequestParam(value = "class", defaultValue = "1") int classId) {
 
-        List<Massage> massages = massageService.getAllMassageForClassByClassId(classId);
+        List<Pisma> pismas = massageService.getAllMassageForClassByClassId(classId);
 
-        return massages;
+        return pismas;
     }
 
     @RequestMapping("/parentmassages")
-    public List<Massage> getMassagesByParentNum(@RequestParam(value = "mobnum", defaultValue = "380501111111") String classId) {
+    public List<Pisma> getMassagesByParentNum(@RequestParam(value = "mobnum", defaultValue = "380501111111") String classId) {
 
-        List<Massage> massages = massageService.getMassagesByParentNum(classId);
+        List<Pisma> pismas = massageService.getMassagesByParentNum(classId);
 
-        return massages;
+        return pismas;
     }
 }
